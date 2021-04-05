@@ -24,7 +24,7 @@ const Rating = styled.div`
   right: 5px;
   opacity: 0;
   transition: opacity 0.1s linear;
-
+  &[color="true"]{ opacity:1; z-index:2}
   
 `;
 
@@ -37,10 +37,12 @@ const ImageContainer = styled.div`
     }
     ${Rating} {
       opacity: 1;
+      
     }
+    
   }
   position: relative;
-  &[isMobile=true]{ opacity:1; z-index:2}
+
 `;
 
 const Title = styled.div`
@@ -67,7 +69,7 @@ const Poster = ({
   rating,
   year,
   isMovie = false,
-  isMobile = (navigator.userAgent.toLowerCase().match(/mobile/i))
+  isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
 }) => (
   <Link to={isMovie ? `/wooflix/movie/${id}` : `/wooflix/show/${id}`}>
     <Container>
@@ -79,7 +81,7 @@ const Poster = ({
               : require("../assets/noimageblack.png").default
           }
         ></Image>
-        <Rating prop={isMobile}>
+        <Rating color={`${isMobile}`}>
           <span role="img" aria-label="rating">
             ⭐
           </span>
