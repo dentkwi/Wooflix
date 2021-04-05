@@ -3,6 +3,8 @@ import propTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
+
 const Container = styled.div`
   font-size: 12px;
 `;
@@ -18,10 +20,12 @@ const Image = styled.div`
 
 const Rating = styled.div`
   position: absolute;
-  top:160px;
-  right:5px;
-  opacity:0;
+  top: 160px;
+  right: 5px;
+  opacity: 0;
   transition: opacity 0.1s linear;
+
+  
 `;
 
 const ImageContainer = styled.div`
@@ -32,18 +36,23 @@ const ImageContainer = styled.div`
       opacity: 0.3;
     }
     ${Rating} {
-      opacity : 1
+      opacity: 1;
     }
   }
   position: relative;
+  &[isMobile=true]{ opacity:1; z-index:2}
 `;
 
 const Title = styled.div`
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 13px;
 `;
 
-const EnTitle = styled.div``;
+const EnTitle = styled.div`
+  margin-bottom: 3px;
+`;
 
 const Year = styled.div`
   font-size: 10px;
@@ -58,12 +67,19 @@ const Poster = ({
   rating,
   year,
   isMovie = false,
+  isMobile = (navigator.userAgent.toLowerCase().match(/mobile/i))
 }) => (
-  <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
+  <Link to={isMovie ? `/wooflix/movie/${id}` : `/wooflix/show/${id}`}>
     <Container>
       <ImageContainer>
-        <Image bgUrl={imageUrl ? `https://image.tmdb.org/t/p/w300${imageUrl}` : require("../assets/noimageblack.png").default}></Image> 
-        <Rating>
+        <Image
+          bgUrl={
+            imageUrl
+              ? `https://image.tmdb.org/t/p/w300${imageUrl}`
+              : require("../assets/noimageblack.png").default
+          }
+        ></Image>
+        <Rating prop={isMobile}>
           <span role="img" aria-label="rating">
             ⭐
           </span>

@@ -151,7 +151,7 @@ const DetailPresenter = ({ result, error, loading }) =>
 
 DetailPresenter.propTypes = {
   result: propTypes.object,
-  error: propTypes.string.isRequired,
+  error: propTypes.string,
   loading: propTypes.bool.isRequired,
 };
 

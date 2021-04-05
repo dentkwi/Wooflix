@@ -72,7 +72,7 @@ HomePresenter.propTypes = {
   nowPlaying: propTypes.array,
   upcoming: propTypes.array,
   popular: propTypes.array,
-  error: propTypes.string.isRequired,
+  error: propTypes.string,
   loading: propTypes.bool.isRequired,
 };
 

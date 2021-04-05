@@ -93,7 +93,7 @@ SearchPresenter.propTypes = {
   movieResults: propTypes.array,
   tvResults: propTypes.array,
   searchTerm: propTypes.string,
-  error: propTypes.string.isRequired,
+  error: propTypes.string,
   loading: propTypes.bool.isRequired,
   handleSubmit: propTypes.func.isRequired,
   updateTerm: propTypes.func.isRequired,

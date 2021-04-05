@@ -73,7 +73,7 @@ TVPresenter.propTypes = {
   topRated: propTypes.array,
   popular: propTypes.array,
   airingToday: propTypes.array,
-  error: propTypes.string.isRequired,
+  error: propTypes.string,
   loading: propTypes.bool.isRequired,
 };
 
