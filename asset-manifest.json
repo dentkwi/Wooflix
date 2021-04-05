@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/wooflix/static/js/main.4fba656d.chunk.js",
+    "main.js.map": "/wooflix/static/js/main.4fba656d.chunk.js.map",
+    "runtime-main.js": "/wooflix/static/js/runtime-main.279ea410.js",
+    "runtime-main.js.map": "/wooflix/static/js/runtime-main.279ea410.js.map",
+    "static/js/2.ea470214.chunk.js": "/wooflix/static/js/2.ea470214.chunk.js",
+    "static/js/2.ea470214.chunk.js.map": "/wooflix/static/js/2.ea470214.chunk.js.map",
+    "index.html": "/wooflix/index.html",
+    "static/js/2.ea470214.chunk.js.LICENSE.txt": "/wooflix/static/js/2.ea470214.chunk.js.LICENSE.txt",
+    "static/media/noimage.jpg": "/wooflix/static/media/noimage.7a6d492e.jpg",
+    "static/media/noimageblack.png": "/wooflix/static/media/noimageblack.8b220d79.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.279ea410.js",
+    "static/js/2.ea470214.chunk.js",
+    "static/js/main.4fba656d.chunk.js"
+  ]
+}
