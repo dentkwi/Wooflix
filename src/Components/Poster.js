@@ -2,8 +2,9 @@ import React from "react";
 import propTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
-
+const Mobile = isMobile;
 
 const Container = styled.div`
   font-size: 12px;
@@ -24,8 +25,11 @@ const Rating = styled.div`
   right: 5px;
   opacity: 0;
   transition: opacity 0.1s linear;
-  &[color="true"]{ opacity:1; z-index:2}
-  
+  &[color="true"] {
+    opacity: 1;
+    z-index: 2;
+    background-color: rgba(20, 20, 20, 0.8);
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -37,12 +41,9 @@ const ImageContainer = styled.div`
     }
     ${Rating} {
       opacity: 1;
-      
     }
-    
   }
   position: relative;
-
 `;
 
 const Title = styled.div`
@@ -69,7 +70,7 @@ const Poster = ({
   rating,
   year,
   isMovie = false,
-  isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+  isMobile = Mobile,
 }) => (
   <Link to={isMovie ? `/wooflix/movie/${id}` : `/wooflix/show/${id}`}>
     <Container>
