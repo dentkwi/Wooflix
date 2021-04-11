@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/wooflix/static/js/main.c80c7df8.chunk.js",
-    "main.js.map": "/wooflix/static/js/main.c80c7df8.chunk.js.map",
+    "main.js": "/wooflix/static/js/main.ef8ba2f7.chunk.js",
+    "main.js.map": "/wooflix/static/js/main.ef8ba2f7.chunk.js.map",
     "runtime-main.js": "/wooflix/static/js/runtime-main.279ea410.js",
     "runtime-main.js.map": "/wooflix/static/js/runtime-main.279ea410.js.map",
     "static/js/2.70405d61.chunk.js": "/wooflix/static/js/2.70405d61.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.279ea410.js",
     "static/js/2.70405d61.chunk.js",
-    "static/js/main.c80c7df8.chunk.js"
+    "static/js/main.ef8ba2f7.chunk.js"
   ]
 }
