@@ -72,7 +72,7 @@ const Poster = ({
   isMovie = false,
   isMobile = Mobile,
 }) => (
-  <Link to={isMovie ? `/wooflix/movie/${id}` : `/wooflix/show/${id}`}>
+  <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
         <Image

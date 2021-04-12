@@ -13,7 +13,7 @@ const SHeader = styled.header`
   padding: 0px 10px;
   background-color: rgba(20, 20, 20, 0.8);
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 90;
 `;
 
 //npa add styled-components 이후 아래와 같이 스타일을 입력할 수 있게된다.
@@ -42,14 +42,14 @@ function Header({ location: { pathname } }) {
   return (
     <SHeader>
       <List>
-        <Item current={pathname === "/wooflix"}>
-          <SLink to="/wooflix">Movie</SLink>
+        <Item current={pathname === "/"}>
+          <SLink to="/">Movie</SLink>
         </Item>
-        <Item current={pathname === "/wooflix/TV"}>
-          <SLink to="/wooflix/TV">TV</SLink>
+        <Item current={pathname === "/TV"}>
+          <SLink to="/TV">TV</SLink>
         </Item>
-        <Item current={pathname === "/wooflix/Search"}>
-          <SLink to="/wooflix/Search">Search</SLink>
+        <Item current={pathname === "/Search"}>
+          <SLink to="/Search">Search</SLink>
         </Item>
       </List>
     </SHeader>

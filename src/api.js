@@ -45,7 +45,9 @@ export const tvApi = {
   search: (term) =>
     api.get("search/tv", {
       params: {
-        query: encodeURIComponent(term),
+        query: (term),
       },
     }),
 };
+
+export const apigetCollection = (id) => api.get(`collection/${id}`)
