@@ -7,9 +7,34 @@ import Loader from "../../../Components/Loader";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+  @media screen and (max-width: 20cm) {
+    grid-template-columns: 1fr 1fr 1fr}
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   /* grid-auto-flow: row dense; */
-  gap: 15px;
+  gap: 2%;
+
+  animation-name: display;
+  animation-duration: 200ms;
+  animation-timing-function:linear;
+  overflow:hidden;
+  position:relative;
+
+  
+  @keyframes display {
+    0% {
+      top:-100px;
+      opacity:0%;
+    }
+
+    50% {
+      top:-50px;
+      opacity:5%;
+    }
+    100%{
+      top:0px;
+      opacity:100%;
+    }
+  }
 `;
 const ItemContainer = styled.div`
   display: flex;
@@ -20,6 +45,7 @@ const ItemContainer = styled.div`
   border-radius: 10px;
   padding: 10px;
   padding-bottom: 10px;
+  
 `;
 
 const PosterContainer = styled.div`
@@ -35,6 +61,7 @@ const Poster = styled.img`
   min-width: 60px;
   width: 100%;
   object-fit: contain;
+ 
 `;
 
 const Name = styled.div`

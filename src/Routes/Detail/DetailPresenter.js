@@ -42,6 +42,29 @@ const Cover = styled.img`
   @media screen and (max-width: 15cm) {
     width: 70%;
     margin-bottom: 30px;
+
+  }
+  animation-name: photo;
+  animation-duration: 300ms;
+  animation-timing-function:linear;
+  overflow:hidden;
+  position:relative;
+
+  
+  @keyframes photo {
+    0% {
+      left:-50px;
+      opacity:0%;
+    }
+
+    50% {
+      left:-20px;
+      opacity:5%;
+    }
+    100%{
+      left:0px;
+      opacity:100%;
+    }
   }
 `;
 

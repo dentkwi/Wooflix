@@ -19,6 +19,10 @@ const TabContainer = styled.ul`
   height: 30px;
   width: 200px;
   margin-bottom: 5px;
+  
+  @media screen and (max-width: 15cm) {
+    justify-content:space-between;
+  }
 `;
 
 const Tabs = styled.button`
@@ -34,8 +38,11 @@ const Tabs = styled.button`
   background: ${(props) => (props.color ? "rgb(250,65,32,0.5)" : "none")};
   box-shadow: ${(props) =>
     props.color ? "0px 0px 2px red" : "0px 0px 10px black"};
+  border-radius: 5px;
+  transition-duration: 500ms;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
 `;
-
 
 const TabContainer2 = styled.ul`
   display: grid;
@@ -44,7 +51,8 @@ const TabContainer2 = styled.ul`
   /* width: 200px; */
   margin-bottom: 5px;
   margin-bottom: 20px;
-  grid-template-columns:50% 50%;
+  grid-template-columns: 45% 45%;
+  gap: 6%;
 `;
 
 const Tabs2 = styled.button`
@@ -57,6 +65,7 @@ const Tabs2 = styled.button`
   height: 25px;
   margin-top: 10px;
   white-space: nowrap;
+  border-radius: 5px;
 `;
 
 const SLink = styled(Link)`

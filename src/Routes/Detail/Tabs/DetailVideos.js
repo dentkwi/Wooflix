@@ -34,6 +34,8 @@ const IframeContainer = styled.div`
   padding-top: 56.25%; /* 4:3 Aspect Ratio */
   /* 위 컨테이너를 이용한 코드는 aspect-ratio가 통하지 않는 브라우저가 아직 많기 때문에 이를 달성하게 해주는 일종의 핵이다. */
   /*https://web.dev/aspect-ratio/ 참고.  */
+
+
 `;
 
 const Iframe = styled.iframe`
